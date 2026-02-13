@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Investment Portal Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+background:#0b0f17;
+color:#e6e6e6;
+}
+
+.container{
+max-width:420px;
+margin:auto;
+padding:30px 20px;
+}
+
+h1,h2{
+text-align:center;
+}
+
+.demo{
+text-align:center;
+font-size:11px;
+color:#ffcc66;
+margin-bottom:25px;
+}
+
+input{
+width:100%;
+padding:14px;
+border-radius:10px;
+border:none;
+background:#11151f;
+color:white;
+font-size:14px;
+}
+
+button{
+width:100%;
+margin-top:16px;
+padding:14px;
+border:none;
+border-radius:10px;
+background:#f0b90b;
+font-weight:600;
+cursor:pointer;
+}
+
+.card{
+background:#11151f;
+padding:18px;
+border-radius:14px;
+margin-top:20px;
+}
+
+.avatar{
+width:60px;
+height:60px;
+border-radius:50%;
+background:#222;
+margin-bottom:12px;
+}
+
+.label{
+color:#9aa0ad;
+font-size:12px;
+margin-top:8px;
+}
+
+.value{
+font-size:14px;
+margin-top:4px;
+}
+
+.receipt{
+background:#11151f;
+padding:18px;
+border-radius:14px;
+margin-top:18px;
+}
+
+.amount{
+font-size:18px;
+font-weight:600;
+}
+
+.status{
+color:#7CFF9B;
+font-size:13px;
+margin-top:4px;
+}
+
+.date{
+font-size:12px;
+color:#9aa0ad;
+margin-top:10px;
+}
+
+.hidden{
+display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- PAGE 1 -->
+<div id="page1">
+
+<h1>Investment Portal</h1>
+<div class="demo">Simulation Environment · Academic Demo</div>
+
+<input type="text" placeholder="Enter UID / Reference">
+
+<button onclick="showProfile()">Search</button>
+
+<div class="card hidden" id="profileCard">
+
+<div class="avatar"></div>
+
+<div class="label">User Name</div>
+<div class="value">XXX</div>
+
+<div class="label">UID</div>
+<div class="value">XXX</div>
+
+<div class="label">Email</div>
+<div class="value">XXX</div>
+
+<button onclick="showReceipts()">View Investment Receipts</button>
+
+</div>
+
+</div>
+
+
+<!-- PAGE 2 -->
+<div id="page2" class="hidden">
+
+<h2>Investment Receipts</h2>
+<div class="demo">Demo Receipts · Simulation Only</div>
+
+<div class="receipt">
+<div class="amount">XXX USDT</div>
+<div class="status">Completed (Simulation)</div>
+<div class="date">Date: 22 Aug 2025</div>
+</div>
+
+<div class="receipt">
+<div class="amount">XXX USDT</div>
+<div class="status">Completed (Simulation)</div>
+<div class="date">Date: 26 Aug 2025</div>
+</div>
+
+<div class="receipt">
+<div class="amount">XXX USDT</div>
+<div class="status">Completed (Simulation)</div>
+<div class="date">Date: 27 Aug 2025</div>
+</div>
+
+<button onclick="goBack()">Back to Profile</button>
+
+</div>
+
+</div>
+
+<script>
+
+function showProfile(){
+document.getElementById("profileCard").classList.remove("hidden");
+}
+
+function showReceipts(){
+document.getElementById("page1").classList.add("hidden");
+document.getElementById("page2").classList.remove("hidden");
+}
+
+function goBack(){
+document.getElementById("page2").classList.add("hidden");
+document.getElementById("page1").classList.remove("hidden");
+}
+
+</script>
+
+</body>
+</html>
