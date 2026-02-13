@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Investment Portal</title>
+<title>BIndgage Portal Demo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -17,17 +17,6 @@ color:#e6e6e6;
 max-width:420px;
 margin:auto;
 padding:30px 20px;
-}
-
-h1,h2{
-text-align:center;
-}
-
-.demo{
-text-align:center;
-font-size:11px;
-color:#ffcc66;
-margin-bottom:25px;
 }
 
 input{
@@ -102,6 +91,13 @@ color:#9aa0ad;
 margin-top:10px;
 }
 
+.demo{
+text-align:center;
+font-size:11px;
+color:#ffcc66;
+margin-bottom:25px;
+}
+
 .hidden{
 display:none;
 }
@@ -115,8 +111,10 @@ display:none;
 <!-- PAGE 1 -->
 <div id="page1">
 
-<h1>Investment Portal</h1>
-<div class="demo">Environment</div>
+<div style="text-align:center;margin-bottom:20px;">
+<div style="font-size:26px;font-weight:700;color:#f0b90b;">BIndgage</div>
+<div class="demo">Digital Asset Portal · Simulation</div>
+</div>
 
 <input type="text" placeholder="Enter UID / Reference">
 
@@ -127,13 +125,13 @@ display:none;
 <div class="avatar"></div>
 
 <div class="label">User Name</div>
-<div class="value">Arihant</div>
+<div class="value">XXX</div>
 
 <div class="label">UID</div>
-<div class="value">1145524815</div>
+<div class="value">XXX</div>
 
 <div class="label">Email</div>
-<div class="value">arihantsurana1110@gmail.com</div>
+<div class="value">XXX</div>
 
 <button onclick="showReceipts()">View Investment Receipts</button>
 
@@ -141,10 +139,22 @@ display:none;
 
 </div>
 
-  
 
 <!-- PAGE 2 -->
+<div id="page2" class="hidden">
+
+<!-- LOGO HEADER -->
 <div style="text-align:center;margin-bottom:20px;">
+
+<div style="display:flex;justify-content:center;align-items:center;gap:10px;">
+
+<div style="
+width:18px;
+height:18px;
+background:#f0b90b;
+transform:rotate(45deg);
+border-radius:3px;
+"></div>
 
 <div style="
 font-size:26px;
@@ -154,15 +164,76 @@ background:linear-gradient(90deg,#f0b90b,#ffd75e);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 ">
-BINANCE
-</div>
-
-<div style="
-font-size:11px;
-color:#ffcc66;
-margin-top:6px;
-">
-Digital Asset Portal · Simulation
+BIndgage
 </div>
 
 </div>
+
+<div class="demo">Investment Receipts · Simulation Only</div>
+
+</div>
+
+<!-- PROFILE CARD -->
+<div class="card">
+
+<div class="avatar"></div>
+
+<div class="label">User Name</div>
+<div class="value">XXX</div>
+
+<div class="label">UID</div>
+<div class="value">XXX</div>
+
+<div class="label">Email</div>
+<div class="value">XXX</div>
+
+<div class="label">Crypto Address</div>
+<div class="value">XXX</div>
+
+</div>
+
+<!-- RECEIPTS -->
+<div class="receipt">
+<div class="amount">XXX USDT</div>
+<div class="status">Completed (Simulation)</div>
+<div class="date">Date: 22 Aug 2025</div>
+</div>
+
+<div class="receipt">
+<div class="amount">XXX USDT</div>
+<div class="status">Completed (Simulation)</div>
+<div class="date">Date: 26 Aug 2025</div>
+</div>
+
+<div class="receipt">
+<div class="amount">XXX USDT</div>
+<div class="status">Completed (Simulation)</div>
+<div class="date">Date: 27 Aug 2025</div>
+</div>
+
+<button onclick="goBack()">Back to Profile</button>
+
+</div>
+
+</div>
+
+<script>
+
+function showProfile(){
+document.getElementById("profileCard").classList.remove("hidden");
+}
+
+function showReceipts(){
+document.getElementById("page1").classList.add("hidden");
+document.getElementById("page2").classList.remove("hidden");
+}
+
+function goBack(){
+document.getElementById("page2").classList.add("hidden");
+document.getElementById("page1").classList.remove("hidden");
+}
+
+</script>
+
+</body>
+</html>
